@@ -1,12 +1,12 @@
 pipeline {
     agent { label 'node-todo-slave1' }
     
-    stages{
-        stage('Code'){
+      stages{
+        /*stage('Code'){
             steps{
                 git url: 'git@github.com:vtalent-devops14/node-todo-cicd.git', branch: 'master' 
             }
-        }
+        }*/
         stage('Build and Test'){
             steps{
                 sh 'docker build . -t venkateshpusarla/node-todo-test:latest'
